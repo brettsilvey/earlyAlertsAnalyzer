@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% block content%}
+<form method="POST">
+    <h3 align="center">Create Alert</h3>
+    <div class="form-group">
+        <label for="name">Student Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter student name" style="width: 500px">
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <textarea
+        rows="5"
+        cols="50"
+        class="form-control"
+        id="earlyAlert"
+        name="earlyAlert"
+        placeholder="Enter Early Alert"
+        ></textarea>
+        <br/>
+        <div class="alert-dropdown">
+            <label for="Alert-Type">Alert Type: </label>
+            <select name="Alert-Type" id="Alert-Type">
+                <option value="Select Alert">Select Alert</option>
+                <option value="Failing Grade">Failing Grade</option>
+                <option value="Student Health">Student Health</option>
+                <option value="Student Safety">Student Safety</option>
+                <option value="COVID-19">COVID-19</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Create New Alert</button>
+        </div>
+    </div>
+</form>
+{%endblock%}
